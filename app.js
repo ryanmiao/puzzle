@@ -25,13 +25,13 @@ var content = '\
   <div id="main" class="main"> \
     <canvas id="puzzle" width="480px" height="480px"></canvas> \
   </div> \
-  <script src="https://raw.githubusercontent.com/ryanmiao/puzzle/master/sliding.js"></script> \
+  <script src="https://rawgit.com/ryanmiao/puzzle/master/sliding.js"></script> \
 </body> \
 </html> \
 '
 
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'application/x-javascript;charset=utf-8'});
+  res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'});
   res.write(content);
   res.end();
 }).listen(process.env.VMC_APP_PORT || 1337, null);
