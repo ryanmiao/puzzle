@@ -1,7 +1,7 @@
 var context = document.getElementById('puzzle').getContext('2d');
 
 var img = new Image();
-img.src = 'pintu.jpg';
+img.src = 'https://raw.githubusercontent.com/ryanmiao/puzzle/master/pintu.jpg';
 img.addEventListener('load', drawTiles, false);
 
 var boardSize = document.getElementById('puzzle').width;
