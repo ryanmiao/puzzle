@@ -5,18 +5,26 @@ var content = '\
 <head> \
   <title>Sliding Puzzle</title> \
   <style> \
-  .picture { \
-    border: 1px solid black; \
-  } \
-  body { \
-    padding: 50px; \
+      .picture { \
+border: 1px solid black; \
+} \
+main { \
+    float: none; \
+} \
+body { \
     background-color: hsl(0,0%,20%); \
-  } \
-  input { \
+} \
+div { \
+    float: none; \
+} \
+label { \
+    width: 24px; \
+    height: 24px; \
+} \
+input { \
     -webkit-appearance: none; \
     display: block; \
     float: left; \
-    margin: 10px; \
     width: 24px; \
     height: 24px; \
     border-radius: 12px; \
@@ -26,33 +34,32 @@ var content = '\
     background-image: -webkit-radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% ); \
     background-repeat: no-repeat; \
     -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1), -webkit-transform .25s cubic-bezier(.8, 0, 1, 1); \
-  } \
-  input:checked { \
+} \
+input:checked { \
     -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), -webkit-transform .25s cubic-bezier(0, 0, .2, 1); \
-  } \
-  input:active { \
+} \
+input:active { \
     -webkit-transform: scale(1.5); \
     -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1); \
-  } \
-  input, input:active { \
-    background-position: 0 24px; \
-  } \
-  input:checked { \
+} \
+input, input:active { \
+    background-position: 24px 0px; \
+} \
+input:checked { \
     background-position: 0 0; \
-  } \
-  input:checked ~ input, input:checked ~ input:active { \
-    background-position: 0 -24px; \
-  } \
-  </style> \
+} \
+input:checked ~ input, input:checked ~ input:active { \
+    background-position: -24px 0px; \
+} \
+</style> \
 </head> \
 <body> \
-  <div id="slider" width="100px"> \
+  <div id="slider"> \
     <form> \
-      <label>Easy</label> \
       <input type="radio" checked="checked" name="scale" size="30" value="3"> \
       <input type="radio" name="scale" size="30" value="4"> \
       <input type="radio" name="scale" size="30" value="5"> \
-      <label>Hard</label> \
+      <label id="gamemode">请选择游戏难度</label> \
     </form> \
     <br> \
   </div> \
