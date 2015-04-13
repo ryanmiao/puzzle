@@ -9,12 +9,8 @@ var content = '\
     border: 1px solid black; \
   } \
   </style> \
-  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> \
 </head> \
 <body> \
-  <div id="title"> \
-    <h2>Sliding Puzzle</h2> \
-  </div> \
   <div id="slider"> \
     <form> \
       <label>Easy</label> \
