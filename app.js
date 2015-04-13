@@ -22,7 +22,7 @@ var content = '\
     <br> \
   </div> \
   <div id="main" class="main"> \
-    <canvas id="puzzle" width="320px" height="320px"></canvas> \
+    <canvas id="puzzle" width="1000px" height="1000px"></canvas> \
   </div> \
   <script src="https://rawgit.com/ryanmiao/puzzle/master/sliding.js"></script> \
 </body> \
