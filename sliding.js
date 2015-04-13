@@ -7,6 +7,7 @@ img.addEventListener('load', drawTiles, false);
 var imgV = new Image()
 imgV.src = 'http://d.hiphotos.baidu.com/zhidao/pic/item/562c11dfa9ec8a13e028c4c0f603918fa0ecc0e4.jpg'
 
+var gamemode = document.getElementById('gamemode');
 var boardSize = document.getElementById('puzzle').width;
 var scalers = document.getElementsByName('scale');
 var tileCount;
@@ -75,7 +76,18 @@ function setBoard() {
     emptyLoc.x = boardParts[tileCount - 1][tileCount - 1].x;
     emptyLoc.y = boardParts[tileCount - 1][tileCount - 1].y;
     solved = false;
-    gameover = false
+    gameover = false;
+    for(var i=0;i<scalers.length;i++) {
+        if (scalers[i].checked) {
+            if (scalers[i].value == 3)
+                gamemode.innerHTML = "简单";
+            else if (scalers[i].value == 4)
+                gamemode.innerHTML = "中等";
+            else if (scalers[i].value == 5)
+                gamemode.innerHTML = "困难";
+        }
+    }
+
 }
 
 function drawTiles() {
