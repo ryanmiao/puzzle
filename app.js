@@ -28,7 +28,7 @@ var content = '\
   <div id="main" class="main"> \
     <canvas id="puzzle" width="480px" height="480px"></canvas> \
   </div> \
-  <script src="https://git.oschina.net/lsryan/maidou/raw/master/sliding.js"></script> \
+  <script src="https://rawgit.com/ryanmiao/puzzle/master/sliding.js"></script> \
 </body> \
 </html> \
 '
