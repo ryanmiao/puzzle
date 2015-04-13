@@ -4,6 +4,9 @@ var img = new Image();
 img.src = 'https://git.oschina.net/lsryan/maidou/raw/master/pintu.jpg';
 img.addEventListener('load', drawTiles, false);
 
+var imgV = new Image()
+imgV.src = 'http://d.hiphotos.baidu.com/zhidao/pic/item/562c11dfa9ec8a13e028c4c0f603918fa0ecc0e4.jpg'
+
 var boardSize = document.getElementById('puzzle').width;
 var scalers = document.getElementsByName('scale');
 var tileCount;
@@ -24,6 +27,7 @@ emptyLoc.x = 0;
 emptyLoc.y = 0;
 
 var solved = false;
+var gameover = false;
 
 var boardParts = new Object;
 setBoard();
@@ -41,16 +45,20 @@ document.getElementById('puzzle').onmousemove = function(e) {
 };
 
 document.getElementById('puzzle').onclick = function() {
-    if (distance(clickLoc.x, clickLoc.y, emptyLoc.x, emptyLoc.y) == 1) {
-        slideTile(emptyLoc, clickLoc);
-        drawTiles();
-    }
-    if (solved) {
-        img.removeEventListener('load', drawTiles, false);
+    if (!gameover) {
+        if (distance(clickLoc.x, clickLoc.y, emptyLoc.x, emptyLoc.y) == 1) {
+            slideTile(emptyLoc, clickLoc);
+            drawTiles();
+        }
+        if (solved) {
+            gameover = true;
+            img.removeEventListener('load', drawTiles, false);
 
-        setTimeout(function () {
-            alert("You solved it!");
-        }, 500);
+            setTimeout(function () {
+                alert("You solved it!");
+            }, 500);
+            context.drawImage(imgV, 0, 0, 480, 480);
+        }
     }
 };
 
