@@ -18,7 +18,9 @@ var content = '\
   <div id="slider"> \
     <form> \
       <label>Easy</label> \
-      <input type="range" id="scale" value="4" min="3" max="5" step="1"> \
+      <input type="radio" checked="checked" name="scale" value="3"> \
+      <input type="radio" name="scale" value="4"> \
+      <input type="radio" name="scale" value="5"> \
       <label>Hard</label> \
     </form> \
     <br> \
@@ -26,7 +28,7 @@ var content = '\
   <div id="main" class="main"> \
     <canvas id="puzzle" width="480px" height="480px"></canvas> \
   </div> \
-  <script src="https://rawgit.com/ryanmiao/puzzle/master/sliding.js"></script> \
+  <script src="https://git.oschina.net/lsryan/maidou/raw/master/sliding.js"></script> \
 </body> \
 </html> \
 '
