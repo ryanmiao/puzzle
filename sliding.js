@@ -56,7 +56,7 @@ document.getElementById('puzzle').onclick = function() {
 
             setTimeout(function () {
                 alert("You solved it!");
-                context.drawImage(imgV, 0, 0, 480, 480);
+                context.drawImage(imgV, 0, 0, boardSize, boardSize);
             }, 500);
         }
     }
