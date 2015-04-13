@@ -52,29 +52,30 @@ document.getElementById('puzzle').onclick = function() {
         }
         if (solved) {
             gameover = true;
-            img.removeEventListener('load', drawTiles, false);
+            //img.removeEventListener('load', drawTiles, false);
 
             setTimeout(function () {
                 alert("You solved it!");
+                context.drawImage(imgV, 0, 0, 480, 480);
             }, 500);
-            context.drawImage(imgV, 0, 0, 480, 480);
         }
     }
 };
 
 function setBoard() {
-  boardParts = new Array(tileCount);
-  for (var i = 0; i < tileCount; ++i) {
-    boardParts[i] = new Array(tileCount);
-    for (var j = 0; j < tileCount; ++j) {
-      boardParts[i][j] = new Object;
-      boardParts[i][j].x = (tileCount - 1) - i;
-      boardParts[i][j].y = (tileCount - 1) - j;
+    boardParts = new Array(tileCount);
+    for (var i = 0; i < tileCount; ++i) {
+        boardParts[i] = new Array(tileCount);
+        for (var j = 0; j < tileCount; ++j) {
+            boardParts[i][j] = new Object;
+            boardParts[i][j].x = (tileCount - 1) - i;
+            boardParts[i][j].y = (tileCount - 1) - j;
+        }
     }
-  }
-  emptyLoc.x = boardParts[tileCount - 1][tileCount - 1].x;
-  emptyLoc.y = boardParts[tileCount - 1][tileCount - 1].y;
-  solved = false;
+    emptyLoc.x = boardParts[tileCount - 1][tileCount - 1].x;
+    emptyLoc.y = boardParts[tileCount - 1][tileCount - 1].y;
+    solved = false;
+    gameover = false
 }
 
 function drawTiles() {
