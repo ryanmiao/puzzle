@@ -41,7 +41,7 @@ document.getElementById('puzzle').onmousemove = function(e) {
 };
 
 document.getElementById('puzzle').onclick = function() {
-    if (solved) {
+    if (!solved) {
         if (distance(clickLoc.x, clickLoc.y, emptyLoc.x, emptyLoc.y) == 1) {
             slideTile(emptyLoc, clickLoc);
             drawTiles();
