@@ -1,7 +1,7 @@
 var context = document.getElementById('puzzle').getContext('2d');
 
 var img = new Image();
-img.src = 'https://raw.githubusercontent.com/ryanmiao/puzzle/master/pintu.jpg';
+img.src = 'https://git.oschina.net/lsryan/maidou/raw/master/pintu.jpg';
 img.addEventListener('load', drawTiles, false);
 
 var imgV = new Image()
