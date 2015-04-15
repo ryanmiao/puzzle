@@ -18,16 +18,16 @@ var content = '\
         float: none; \
       } \
       label { \
-        width: px; \
-        height: 24px; \
+        width: 72px; \
+        height: 72px; \
       } \
       input { \
         -webkit-appearance: none; \
         display: block; \
         float: left; \
-        width: 24px; \
-        height: 24px; \
-        border-radius: 12px; \
+        width: 72px; \
+        height: 72px; \
+        border-radius: 36px; \
         cursor: pointer; \
         box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px; \
         background-color: hsla(0,0%,0%,.2); \
@@ -43,13 +43,13 @@ var content = '\
         -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1); \
       } \
       input, input:active { \
-        background-position: 24px 0px; \
+        background-position: 72px 0px; \
       } \
       input:checked { \
         background-position: 0 0; \
       } \
       input:checked ~ input, input:checked ~ input:active { \
-        background-position: -24px 0px; \
+        background-position: -72px 0px; \
       } \
 </style> \
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">\
