@@ -52,7 +52,6 @@ var content = '\
         background-position: -72px 0px; \
       } \
 </style> \
-<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">\
 </head> \
 <body> \
   <div id="main" class="main"> \
