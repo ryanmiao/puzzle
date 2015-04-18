@@ -1,7 +1,8 @@
 var context = document.getElementById('puzzle').getContext('2d');
 
 var img = new Image();
-img.src = 'https://git.oschina.net/lsryan/maidou/raw/master/pintu.jpg';
+var ran = Math.floor(Math.random() * 11)
+img.src = 'https://git.oschina.net/lsryan/maidou/raw/master/' + ran + '.jpg';
 img.addEventListener('load', drawTiles, false);
 
 var imgV = new Image()
