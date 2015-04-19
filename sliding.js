@@ -1,12 +1,11 @@
 var context = document.getElementById('puzzle').getContext('2d');
 
 var img = new Image();
-var ran = Math.floor(Math.random() * 11)
+var ran = Math.floor(Math.random() * 11);
 img.src = 'https://git.oschina.net/lsryan/maidou/raw/master/pintu' + ran + '.jpg';
 img.addEventListener('load', drawTiles, false);
 
-var imgV = new Image()
-imgV.src = 'http://d.hiphotos.baidu.com/zhidao/pic/item/562c11dfa9ec8a13e028c4c0f603918fa0ecc0e4.jpg'
+var imgV;
 
 var gamemode = document.getElementById('gamemode');
 var boardSize = document.getElementById('puzzle').width;
@@ -57,7 +56,7 @@ document.getElementById('puzzle').onclick = function() {
             //img.removeEventListener('load', drawTiles, false);
 
             setTimeout(function () {
-                alert("You solved it!");
+                alert("游戏通关，恭喜获得新人们送来的支付宝红包，快去抢领!");
                 context.drawImage(imgV, 0, 0, boardSize, boardSize);
             }, 500);
         }
@@ -86,6 +85,8 @@ function setBoard() {
                 gamemode.innerHTML = "中等";
             else if (scalers[i].value == 5)
                 gamemode.innerHTML = "困难";
+            imgV = new Image();
+            imgV.src = 'https://git.oschina.net/lsryan/maidou/raw/master/gift' + scalers[i].value + '.jpg';
         }
     }
 
